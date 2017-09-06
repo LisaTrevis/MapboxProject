@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8">
+          <!-- Allows media queries to work -->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>MapBox Project</title>
+          <!-- Mapbox CDN -->
+          <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+          <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+          <!-- Animate CSS -->
+          <link rel="stylesheet" href="css/animate.min.css">
+          <!-- Bootstrap CSS -->
+          <link rel="stylesheet" href="css/bootstrap.css">
+          <!-- Custom CSS -->
+          <link rel="stylesheet" href="css/main.css">
+     </head>
+     <body>
+          
+          <div id='map' style='width: 100vw; height: 100vh;'></div>
+          <script>
+               mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYXRyZXZpcyIsImEiOiJjajc5YXUyM3kwMDU3MnFsa2dkaXJmaG5sIn0.IzYsdCyTZxWQejNt_-2_mA';
+               var map = new mapboxgl.Map({
+               container: 'map',
+               style: 'mapbox://styles/mapbox/streets-v10',
+               center: [-122.45,37.77], // starting position
+               zoom: 12 // starting zoom
+               });
+
+               // Add zoom and rotation controls to the map.
+               map.addControl(new mapboxgl.NavigationControl());
+          </script>
+
+          <!-- Allows bootstrap to work -->
+          <script
+          src="http://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+          <!-- Bootstrap JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
+          <!-- Custom JavaScript -->
+          <script src="js/main.js"></script>
+     </body>
+</html>
